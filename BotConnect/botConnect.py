@@ -1,4 +1,3 @@
-import code
 import sys
 from bluepy import btle
 
@@ -28,7 +27,7 @@ class RobotFinder(object):
 
 class RobotControl(object):
     TRANSMIT_UUID_DRIVE = "8903136c-5f13-4548-a885-c58779136702"
-    TRANSMIT_UUID_LED = "8903136c-5f13-4548-a885-c58779136703"
+    TRANSMIT_UUID_CONTROL = "8903136c-5f13-4548-a885-c58779136703"
 
     def __init__(self, addr):
         self._mac = addr
@@ -36,7 +35,7 @@ class RobotControl(object):
     def connect(self):
         self._p = btle.Peripheral(self._mac, btle.ADDR_TYPE_RANDOM)
         self._p_transmit_drive = self._p.getCharacteristics(uuid=self.TRANSMIT_UUID_DRIVE)[0]
-        self._p_transmit_control = self._p.getCharacteristics(uuid=self.TRANSMIT_UUID_LED)[0]
+        self._p_transmit_control = self._p.getCharacteristics(uuid=self.TRANSMIT_UUID_CONTROL)[0]
         self.d = self._p_transmit_drive
         self.c = self._p_transmit_control
 
