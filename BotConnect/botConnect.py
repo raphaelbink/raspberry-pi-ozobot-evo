@@ -1,4 +1,10 @@
+#!/usr/bin/env python
 import sys
+
+if sys.version_info[0] < 3:
+    print("This script requires Python version 3.X or higher")
+    sys.exit(1)
+
 from bluepy import btle
 
 class Robot(object):
