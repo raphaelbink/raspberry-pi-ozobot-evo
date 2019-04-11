@@ -44,6 +44,9 @@ class RobotControl(object):
         self._p_transmit_control = self._p.getCharacteristics(uuid=self.TRANSMIT_UUID_CONTROL)[0]
         self.d = self._p_transmit_drive
         self.c = self._p_transmit_control
+        
+        # send stop file command to OzoBot to enable for sending commands
+        self.c.write(b"\x50\x02\x01")
 
     def disconnect(self):
         pass
