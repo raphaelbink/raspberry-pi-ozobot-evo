@@ -1,8 +1,8 @@
 # raspberry-pi-ozobot-evo
-Control your Ozobot Evo with your Raspberry Pi via Bluetooth
+Control your [Ozobot Evo](https://amzn.to/2D91W3s)* with your Raspberry Pi via Bluetooth
 
 Ozobot Evo is a toy robot that has multiple features like automatic path following, remote control via App, proximity sensors, and LEDs.
-In this repo you find the code to control the Ozobot Evo with a Raspberry Pi. 
+In this repo you find the code to control the [Ozobot Evo](https://amzn.to/2D91W3s)* with a Raspberry Pi. 
 
 
 ## Special characteristics of the Ozobot Evo protocol
@@ -25,3 +25,6 @@ TRANSMIT_UUID_CONTROL = "8903136c-5f13-4548-a885-c58779136703"
 The format of the byte arrays differs in length based on the command. It always starts with an identifier of the command itself (e.g. 64 for drive and 68 for led), followed by the actual payload.
 
 In many cases, some of the parameters are added twice to the paylod, whereas one of the values is shifted by 8 bits.
+
+
+* Affiliate Links
